@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Tugas Quiz</title>
+    </head>
+    </html>
+<body style="background-color: cornflowerblue">
+    <marquee>
+        <h1>SELAMAT DATANG DI QUIZ PURWADHIKA</h1>
+    </marquee>
+    <center>
+    <form id = "hasil">
+        <h2>Silahkan Jawab Pertanyaan di Bawah Ini</h2>
+        <br>
+        <h4>
+            <h3>1. Siapakah Presiden pertama republik indonesia ? </h3>
+            <br>
+            <input type="radio" name = "opsi1" value = "salah" id = ""> </input>Prof.BJ.habibie
+           <input type="radio" name = "opsi1" value = "salah" id = ""> </input>Abdurrahman Wahid
+           <input type="radio" name = "opsi1" value = "benar" id = ""> </input>Ir.Soekarno
+           <input type="radio" name = "opsi1" value = "salah" id = ""> </input>Joko Widodo
+            <br>
+            <br>
+            <h3>2. Siapa founder dari PURWADHIKA ?</h3>
+            <br>
+            <input type="radio" name = "opsi2" value="salah" id=""> </input>Lian
+            <input type="radio" name = "opsi2" value="salah" id=""> </input>Baron
+            <input type="radio" name = "opsi2" value="benar" id="" ></input>Purwa
+            <input type="radio" name = "opsi2" value="salah" id="" ></input>Widya
+            <br>
+            <br>
+            <h3>3. Siapa tokoh utama dalam film Spiderman ?</h3>
+            <input type="radio" name="opsi3" value="benar" id="" ></input>Peter Parker
+            <input type="radio" name="opsi3" value="salah" id="" ></input>Donal Trump
+            <input type="radio" name="opsi3" value="salah" id="" ></input>Emma Stone
+            <input type="radio" name="opsi3" value="salah" id="" ></input>"Dochi
+            <br>
+            <br>
+            <h3>4. Siapakah sosok di balik topeng Batman ?</h3>
+            <input type="radio" name="opsi4" value="salah" id=""> </input>Natasha Romano
+            <input type="radio" name="opsi4" value="salah" id="" ></input>Peter Parker
+            <input type="radio" name="opsi4" value="salah" id="" ></input>Tony Stark
+            <input type="radio" name="opsi4" value="benar" id="" ></input>Bruce Wayna
+            <br>
+            <br>
+            <br>
+            <input style="width: 300px; font-size: 25pt;" type="button" value="Lihat Hasil" onclick="cekHasil()">
+        </h4>
+        </form> <br>
+        <h3 id = "Nilai anda">
+
+        </h3>
+    </center>
+
+    <script>
+        var array = []
+        function cekHasil(){
+            var output = 0
+            var hasil1 = document.getElementById("hasil").elements["opsi1"].value
+            array.push(hasil1)
+            var hasil2 = document.getElementById("hasil").elements["opsi2"].value
+            array.push(hasil2)
+            var hasil3 = document.getElementById("hasil").elements["opsi3"].value
+            array.push(hasil3)
+            var hasil4 = document.getElementById("hasil").elements["opsi4"].value
+            array.push(hasil4)
+            for(var a=0; a<array.length; a++){
+                if(array[a] == "benar"){
+                    output += 25
+                }
+            }
+        console.log(output)
+        document.getElementById("Nilai anda").innerHTML = `Nilai Anda Sebesar ${output}`
+        array = []
+        document.getElementById("Nilai anda").innerHTML = `Nilai Anda Sebesar ${output}`
+
+        }
+    </script>
+
+    
+</body>
